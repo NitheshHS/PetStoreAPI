@@ -1,12 +1,10 @@
-package RequestUtil;
+package util;
 
 import base.ExtentReportManager;
-import com.aventstack.extentreports.ExtentTest;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
-import org.testng.annotations.Test;
 
 public class RequestUtil {
 
@@ -31,7 +29,7 @@ public class RequestUtil {
         manager.info(String.format("endpoint: {%s}", endpoint));
        return RestAssured.given()
                 .contentType(ContentType.JSON)
-                .pathParam("id", id)
+                .pathParam("petId", id)
                 .when()
                 .get(endpoint)
                 .then().extract().response();
@@ -45,6 +43,18 @@ public class RequestUtil {
                 .body(payload)
                 .when()
                 .post(endpoint)
+                .then().extract().response();
+    }
+
+
+    public Response deleteRequest(RequestSpecification specification, String endpoint){
+        manager.info("Specification: "+specification.log().all().toString());
+        manager.info("Endpoint: "+endpoint);
+        return RestAssured.given()
+                .spec(specification)
+                .contentType(ContentType.JSON)
+                .when()
+                .delete(endpoint)
                 .then().extract().response();
     }
 }

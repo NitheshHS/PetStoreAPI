@@ -1,6 +1,7 @@
 package test;
 
 import base.BaseTest;
+import base.IEndPoints;
 import io.restassured.response.Response;
 import org.testng.annotations.Test;
 
@@ -33,7 +34,10 @@ public class CreateNewPetTest extends BaseTest {
         pet.setPhotoUrls(photoUrl);
         pet.setStatus("Available");
 
-        Response response = requestUtil.postResponse(pet, "/pet");
-        response.prettyPrint();
+        Response response = requestUtil.postResponse(pet, IEndPoints.ADD_NEW_PET);
+        responseUtil.printResponse(response);
+        responseUtil.verifyStatusCode(200);
+        responseUtil.verifyContentTypeIsJson();
+
     }
 }

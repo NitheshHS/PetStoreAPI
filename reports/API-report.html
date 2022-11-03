@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">API</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Nov 1, 2022 08:50:35 PM</span></a>
+<a href="#"><span class="badge badge-primary">Nov 3, 2022 04:20:03 PM</span></a>
 </li>
 </ul>
 </div>
@@ -79,9 +79,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">createPet</p>
+            <p class="name">deletePet</p>
             <p class="text-sm">
-              <span>8:50:35 PM</span> / <span>00:00:00:226</span>
+              <span>4:20:03 PM</span> / <span>00:00:06:196</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -89,10 +89,10 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">createPet</h5>
-<span class='badge badge-success'>11.01.2022 8:50:35 PM</span>
-<span class='badge badge-danger'>11.01.2022 8:50:36 PM</span>
-<span class='badge badge-default'>00:00:00:226</span>
+<h5 class="test-status text-pass">deletePet</h5>
+<span class='badge badge-success'>11.03.2022 4:20:03 PM</span>
+<span class='badge badge-danger'>11.03.2022 4:20:10 PM</span>
+<span class='badge badge-default'>00:00:06:196</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -104,16 +104,276 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>8:50:36 PM</td>
+        <td>4:20:04 PM</td>
+        <td>
+          Payload: CreatePet(id=1, category=Category(id=1, name=Animal), name=Dog, photoUrls=[https://mypet.com], tags=[Tag(id=1, name=No awards)], status=available)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:20:04 PM</td>
+        <td>
+          Endpoint: /pet
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:20:07 PM</td>
+        <td>
+          Json path: id
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:20:07 PM</td>
+        <td>
+          Json value: 1
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:20:07 PM</td>
+        <td>
+          headers: [Date==Thu, 03 Nov 2022 10:50:15 GMT, Content-Type==application/json, Transfer-Encoding==chunked, Connection==keep-alive, Access-Control-Allow-Origin==*, Access-Control-Allow-Methods==GET, POST, DELETE, PUT, Access-Control-Allow-Headers==Content-Type, api_key, Authorization, Server==Jetty(9.2.9.v20150224)]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:20:07 PM</td>
+        <td>
+          response Body: {"id":1,"category":{"id":1,"name":"Animal"},"name":"Dog","photoUrls":["https://mypet.com"],"tags":[{"id":1,"name":"No awards"}],"status":"available"}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:20:07 PM</td>
+        <td>
+          Specification: io.restassured.internal.RequestSpecificationImpl@6ac45c0c
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:20:07 PM</td>
+        <td>
+          Endpoint: /pet/{petId}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:20:10 PM</td>
+        <td>
+          headers: [Date==Thu, 03 Nov 2022 10:50:18 GMT, Content-Type==application/json, Transfer-Encoding==chunked, Connection==keep-alive, Access-Control-Allow-Origin==*, Access-Control-Allow-Methods==GET, POST, DELETE, PUT, Access-Control-Allow-Headers==Content-Type, api_key, Authorization, Server==Jetty(9.2.9.v20150224)]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:20:10 PM</td>
+        <td>
+          response Body: {"code":200,"type":"unknown","message":"1"}
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="2"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">getAllPet</p>
+            <p class="text-sm">
+              <span>4:20:10 PM</span> / <span>00:00:00:006</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">getAllPet</h5>
+<span class='badge badge-success'>11.03.2022 4:20:10 PM</span>
+<span class='badge badge-danger'>11.03.2022 4:20:10 PM</span>
+<span class='badge badge-default'>00:00:00:006</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:20:10 PM</td>
+        <td>
+          Specs: io.restassured.internal.RequestSpecificationImpl@3a40bb52
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:20:10 PM</td>
+        <td>
+          EndPoint: /pet/findByStatus
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="3"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">getSinglePet</p>
+            <p class="text-sm">
+              <span>4:20:12 PM</span> / <span>00:00:02:230</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">getSinglePet</h5>
+<span class='badge badge-success'>11.03.2022 4:20:12 PM</span>
+<span class='badge badge-danger'>11.03.2022 4:20:15 PM</span>
+<span class='badge badge-default'>00:00:02:230</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:20:12 PM</td>
+        <td>
+          Payload: CreatePet(id=1, category=Category(id=1, name=Animal), name=Dog, photoUrls=[https://mypet.com], tags=[Tag(id=1, name=No awards)], status=available)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:20:12 PM</td>
+        <td>
+          Endpoint: /pet
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:20:15 PM</td>
+        <td>
+          Json path: id
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:20:15 PM</td>
+        <td>
+          Json value: 1
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:20:15 PM</td>
+        <td>
+          headers: [Date==Thu, 03 Nov 2022 10:50:23 GMT, Content-Type==application/json, Transfer-Encoding==chunked, Connection==keep-alive, Access-Control-Allow-Origin==*, Access-Control-Allow-Methods==GET, POST, DELETE, PUT, Access-Control-Allow-Headers==Content-Type, api_key, Authorization, Server==Jetty(9.2.9.v20150224)]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:20:15 PM</td>
+        <td>
+          response Body: {"id":1,"category":{"id":1,"name":"Animal"},"name":"Dog","photoUrls":["https://mypet.com"],"tags":[{"id":1,"name":"No awards"}],"status":"available"}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:20:15 PM</td>
+        <td>
+          id: 1
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:20:15 PM</td>
+        <td>
+          endpoint: {/pet/{petId}}
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="4"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">createPet</p>
+            <p class="text-sm">
+              <span>4:20:17 PM</span> / <span>00:00:02:252</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">createPet</h5>
+<span class='badge badge-success'>11.03.2022 4:20:17 PM</span>
+<span class='badge badge-danger'>11.03.2022 4:20:19 PM</span>
+<span class='badge badge-default'>00:00:02:252</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:20:17 PM</td>
         <td>
           Payload: CreatePet(id=1, category=Category(id=1, name=Animal), name=PitBull, photoUrls=[https://pet.com], tags=[Tag(id=1, name=No tags)], status=Available)
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>8:50:36 PM</td>
+        <td>4:20:17 PM</td>
         <td>
           Endpoint: /pet
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:20:19 PM</td>
+        <td>
+          headers: [Date==Thu, 03 Nov 2022 10:50:28 GMT, Content-Type==application/json, Transfer-Encoding==chunked, Connection==keep-alive, Access-Control-Allow-Origin==*, Access-Control-Allow-Methods==GET, POST, DELETE, PUT, Access-Control-Allow-Headers==Content-Type, api_key, Authorization, Server==Jetty(9.2.9.v20150224)]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:20:19 PM</td>
+        <td>
+          response Body: {"id":1,"category":{"id":1,"name":"Animal"},"name":"PitBull","photoUrls":["https://pet.com"],"tags":[{"id":1,"name":"No tags"}],"status":"Available"}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:20:19 PM</td>
+        <td>
+          Verifying the status code
         </td>
       </tr>
   </tbody>
@@ -135,19 +395,19 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Nov 1, 2022 08:50:35 PM</h3>
+<h3>Nov 3, 2022 04:20:03 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Nov 1, 2022 08:50:39 PM</h3>
+<h3>Nov 3, 2022 04:20:20 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-pass">Tests Passed</p>
-<h3>1</h3>
+<h3>4</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -170,7 +430,7 @@
 </div>
 <div class="card-footer">
 <div><small data-tooltip='100%'>
-<b>1</b> tests passed
+<b>4</b> tests passed
 </small>
 </div>
 <div>
@@ -195,7 +455,7 @@
 <div><small data-tooltip='0%'><b>0</b> events passed</small></div>
 <div>
 <small data-tooltip='0%'><b>0</b> events failed,
-<b data-tooltip='%'>2</b> others
+<b data-tooltip='%'>25</b> others
 </small>
 </div>
 </div>
@@ -211,7 +471,7 @@
 </div></div>
 <script>
 var timeline = {
-"createPet":0.226
+"deletePet":6.196,"getAllPet":0.006,"getSinglePet":2.23,"createPet":2.252
 };
 </script>
 <div class="row">
@@ -238,7 +498,7 @@ var timeline = {
 <script>
 var statusGroup = {
 parentCount: 5,
-passParent: 1,
+passParent: 4,
 failParent: 0,
 warningParent: 0,
 skipParent: 0,
@@ -259,7 +519,7 @@ passEvents: 0,
 failEvents: 0,
 warningEvents: 0,
 skipEvents: 0,
-infoEvents: 2
+infoEvents: 25
 };
 </script>        </div>
       </div>
