@@ -1,0 +1,16 @@
+{
+  "new_pet": {
+    "id": 1,
+    "category": {
+      "id": 1,
+      "name": "Animal"
+    },
+    "name": "DOG",
+    "photoUrls": ["https://peturl1.com"],
+    "tag": [{
+      "id": 1,
+      "name": "no reward"
+    }],
+    "status": "available"
+  }
+}

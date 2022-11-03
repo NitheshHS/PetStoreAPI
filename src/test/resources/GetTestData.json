@@ -1,0 +1,11 @@
+{
+  "getAllAvailablePet": {
+    "status": "available"
+  },
+  "getAllPendingPet": {
+    "status": "pending"
+  },
+  "getAllSoldPet": {
+    "status": "sold"
+  }
+}

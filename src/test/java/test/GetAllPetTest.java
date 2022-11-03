@@ -1,5 +1,8 @@
 package test;
 
+import static File.JsonFileUtil.*;
+
+import File.JsonFilePath;
 import base.BaseTest;
 import base.IEndPoints;
 import io.restassured.builder.RequestSpecBuilder;
@@ -12,9 +15,28 @@ import requestpojo.Tag;
 public class GetAllPetTest extends BaseTest {
 
     @Test
-    public void getAllPet(){
+    public void getAllPetByAvailableStatus() throws Exception {
+        String json = loadJsonFile(JsonFilePath.GET_TESTDATA);
         RequestSpecBuilder requestSpecBuilder = new RequestSpecBuilder();
-        requestSpecBuilder.addQueryParam("status", "available");
+        requestSpecBuilder.addQueryParam("status", String.valueOf(read(json,"$.getAllAvailablePet.status")));
+        Response response = requestUtil.getResponse(requestSpecBuilder.build(), IEndPoints.FIND_PET_BY_STATUS);
+        response.print();
+    }
+
+    @Test
+    public void getAllPetByPendingStatus() throws Exception {
+        String json = loadJsonFile(JsonFilePath.GET_TESTDATA);
+        RequestSpecBuilder requestSpecBuilder = new RequestSpecBuilder();
+        requestSpecBuilder.addQueryParam("status", String.valueOf(read(json,"$.getAllPendingPet.status")));
+        Response response = requestUtil.getResponse(requestSpecBuilder.build(), IEndPoints.FIND_PET_BY_STATUS);
+        response.print();
+    }
+
+    @Test
+    public void getAllPetBySoldStatus() throws Exception {
+        String json = loadJsonFile(JsonFilePath.GET_TESTDATA);
+        RequestSpecBuilder requestSpecBuilder = new RequestSpecBuilder();
+        requestSpecBuilder.addQueryParam("status", String.valueOf(read(json,"$.getAllSoldPet.status")));
         Response response = requestUtil.getResponse(requestSpecBuilder.build(), IEndPoints.FIND_PET_BY_STATUS);
         response.print();
     }
