@@ -14,7 +14,7 @@ import requestpojo.Tag;
 
 public class CreateNewPetTest extends BaseTest {
 
-    @Test
+    @Test(groups = {"smokeTest"})
     public void createPet() throws Exception {
         String json=JsonFileUtil.loadJsonFile(JsonFilePath.POST_TESTDATA);
         int id = (int)JsonFileUtil.read(json, "new_pet.id");
